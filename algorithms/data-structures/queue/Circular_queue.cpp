@@ -59,10 +59,15 @@ public:
 int main()
 {
     MyCircularQueue q(5);
-    for (int i=1;i<=5;i++){
+    for (int i = 1; i <= 5; i++)
+    {
         q.enQueue(i);
     }
-    
+    while (q.isEmpty() != true)
+    {
+        cout << q.Front() << endl;
+        q.deQueue();
+    }
 
     return 0;
 }
